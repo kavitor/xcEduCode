@@ -1,0 +1,22 @@
+server:
+  port: 31000
+spring:
+  application:
+    name: xc-service-manage-cms-client
+  data:
+    mongodb:
+      uri:  mongodb://root:123@localhost:27017
+      database: xc_cms
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: kavito
+    password: 123456
+    virtualHost: /kavito
+xuecheng:
+  mq:
+    #cms客户端监控的队列名称（不同的客户端监控的队列不能重复，例如10个client分别配置不同的，比如这里的01是门户页面发布的，03是课程详情页面发布的，分别放在2个client中）
+    #queue: queue_cms_postpage_01
+    #routingKey: 5a751fab6abb5044e0d19ea1	#此routingKey为门户站点ID
+    queue: queue_cms_postpage_03
+    routingKey: 5d0ca4d162d9021d5ca377b3	#此routingKey为课程详情站点ID
