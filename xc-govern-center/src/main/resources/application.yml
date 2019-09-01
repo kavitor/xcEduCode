@@ -10,7 +10,12 @@ eureka:
     serviceUrl: #Eureka客户端与Eureka服务端的交互地址，高可用状态配置对方的地址，单机状态配置自己（如果不配置则默认本机8761端口）
       defaultZone: ${EUREKA_SERVER:http://eureka02:50102/eureka/}
   server:
-    enable-self-preservation: false #是否开启自我保护模式
-    eviction-interval-timer-in-ms: 60000 #服务注册表清理间隔（单位毫秒，默认是60*1000）
+    #每隔60秒对所有失效的服务（服务提供者向Eureka注册服务每30s会维持一个心跳,超过90秒没发送心跳认为服务失效）进行剔除。
+    #这是触发了Eureka的自我保护机制。当一个服务未按时进行心跳续约时，
+    #Eureka会统计最近15分钟心跳失败的服务实例的比例是否超过了85%。在生产环境下，因为网络延迟等原因，
+    #心跳失败实例的比例很有可能超标，但是此时就把服务剔除列表并不妥当，因为服务可能没有宕机。
+    #Eureka就会把当前实例的注册信息保护起来，不予剔除。生产环境下这很有效，保证了大多数服务依然可用。
+    enable-self-preservation: false # 关闭自我保护模式（缺省为打开，开发阶段关闭，线上开启）
+    eviction-interval-timer-in-ms: 60000 #服务注册表清理间隔（单位毫秒，默认是60*1000），开发阶段调小点10000
   instance:
     hostname: ${EUREKA_DOMAIN:eureka01}
