@@ -22,5 +22,4 @@ public class RabbitmqConfig {
     public Exchange EXCHANGE_TOPICS_INFORM() {
         return ExchangeBuilder.directExchange(EX_ROUTING_CMS_POSTPAGE).durable(true).build();
     }
-
 }
