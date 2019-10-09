@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kavito.mybatisgenerator.mapper.AccountMapper">
+  <resultMap id="BaseResultMap" type="com.kavito.mybatisgenerator.pojo.Account">
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="UID" jdbcType="INTEGER" property="uid" />
+    <result column="MONEY" jdbcType="DOUBLE" property="money" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from account
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="ID" keyProperty="id" parameterType="com.kavito.mybatisgenerator.pojo.Account" useGeneratedKeys="true">
+    insert into account (UID, MONEY)
+    values (#{uid,jdbcType=INTEGER}, #{money,jdbcType=DOUBLE})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.kavito.mybatisgenerator.pojo.Account">
+    update account
+    set UID = #{uid,jdbcType=INTEGER},
+      MONEY = #{money,jdbcType=DOUBLE}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select ID, UID, MONEY
+    from account
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, UID, MONEY
+    from account
+  </select>
+  <resultMap id="BaseResultMap" type="com.kavito.mybatisgenerator.pojo.Account">
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="UID" jdbcType="INTEGER" property="uid" />
+    <result column="MONEY" jdbcType="DOUBLE" property="money" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from account
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="ID" keyProperty="id" parameterType="com.kavito.mybatisgenerator.pojo.Account" useGeneratedKeys="true">
+    insert into account (UID, MONEY)
+    values (#{uid,jdbcType=INTEGER}, #{money,jdbcType=DOUBLE})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.kavito.mybatisgenerator.pojo.Account">
+    update account
+    set UID = #{uid,jdbcType=INTEGER},
+      MONEY = #{money,jdbcType=DOUBLE}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select ID, UID, MONEY
+    from account
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, UID, MONEY
+    from account
+  </select>
+  <resultMap id="BaseResultMap" type="com.kavito.mybatisgenerator.pojo.Account">
+    <id column="ID" jdbcType="INTEGER" property="ID" />
+    <result column="UID" jdbcType="INTEGER" property="UID" />
+    <result column="MONEY" jdbcType="DOUBLE" property="MONEY" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from account
+    where ID = #{ID,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="ID" keyProperty="ID" parameterType="com.kavito.mybatisgenerator.pojo.Account" useGeneratedKeys="true">
+    insert into account (UID, MONEY)
+    values (#{UID,jdbcType=INTEGER}, #{MONEY,jdbcType=DOUBLE})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.kavito.mybatisgenerator.pojo.Account">
+    update account
+    set UID = #{UID,jdbcType=INTEGER},
+      MONEY = #{MONEY,jdbcType=DOUBLE}
+    where ID = #{ID,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select ID, UID, MONEY
+    from account
+    where ID = #{ID,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, UID, MONEY
+    from account
+  </select>
+  <resultMap id="BaseResultMap" type="com.kavito.mybatisgenerator.pojo.Account">
+    <id column="ID" jdbcType="INTEGER" property="ID" />
+    <result column="UID" jdbcType="INTEGER" property="UID" />
+    <result column="MONEY" jdbcType="DOUBLE" property="MONEY" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from account
+    where ID = #{ID,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="ID" keyProperty="ID" parameterType="com.kavito.mybatisgenerator.pojo.Account" useGeneratedKeys="true">
+    insert into account (UID, MONEY)
+    values (#{UID,jdbcType=INTEGER}, #{MONEY,jdbcType=DOUBLE})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.kavito.mybatisgenerator.pojo.Account">
+    update account
+    set UID = #{UID,jdbcType=INTEGER},
+      MONEY = #{MONEY,jdbcType=DOUBLE}
+    where ID = #{ID,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select ID, UID, MONEY
+    from account
+    where ID = #{ID,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select ID, UID, MONEY
+    from account
+  </select>
+</mapper>
