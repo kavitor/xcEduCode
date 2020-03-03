@@ -3,6 +3,7 @@ package com.kavito.time;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.util.Date;
 import java.util.Set;
 
 /**
@@ -21,6 +22,7 @@ public class LocalDateTimeDemo {
         LocalDateTime now = LocalDateTime.now();
         // 2019-12-20T13:38:53.042
         System.out.println(now);
+        System.out.println(new Date());
 
         /**
          * 2、解析使用"of"或者"parse"方法
@@ -84,7 +86,7 @@ public class LocalDateTimeDemo {
         System.out.println(zonedDateTime);
 
         /**
-         * 6、使用Period和Duration类
+         * 6、使用Period和Duration类  计算时间差
          * Period:用于计算两个日期（年月日）间隔
          * Duration:用于计算两个时间（时分秒纳秒）间隔
          */

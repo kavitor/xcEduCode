@@ -1,4 +1,4 @@
-package com.kavito.java8.Optional;
+package com.kavito.java8.optional;
 
 import org.junit.Test;
 

@@ -1,4 +1,5 @@
 package com.kavito.time;
+
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeConstants;
 import org.junit.Test;
@@ -6,6 +7,8 @@ import org.junit.Test;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @Description: JodaTime
@@ -34,6 +37,15 @@ public class JodaTime {
 
     @Test
     public void test() {
+        Map<String, Integer> infoMap = new HashMap<>();
+        infoMap.put("name", 0);
+        infoMap.put("site", 0);
+        infoMap.put("email", 0);
+        infoMap.forEach((k,v)->{
+            System.out.println(k+" "+v);
+        });
+
+        System.out.println(infoMap.toString());
         Date date = calculateDistributionTimeByOrderCreateTime(new Date());
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         System.out.println("发货时间："+dateFormat.format(date));

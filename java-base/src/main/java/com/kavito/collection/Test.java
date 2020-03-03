@@ -1,4 +1,4 @@
-package com.kavito.Collection;
+package com.kavito.collection;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
